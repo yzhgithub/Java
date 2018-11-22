@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <!--
+            1. 声明Dispatcher，告诉Web容器我们将使用SpringMVC的DispatcherServlet。
+            2. DispatcherServlet在SpringMVC中是集中访问点，负责分派调度工作。
+        -->
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--DispatcherServlet在加载时需要SpringMVC的配置文件，因此需要声明该配置文件的位置。
+            如果不配置<init-param>，则应用会默认的去WEB-INF下寻找名字为[servlet-name]-servlet.xml的文件
+            <init-param>
+                <param-name>contextConfigLocation</param-name>
+                <param-value>/WEB-INF/spring-mvc-config.xml</param-value>
+            </init-param>
+         -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!--配置url-pattern,设置为/拦截所有的URL请求，并映射到dispatcher-->
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
