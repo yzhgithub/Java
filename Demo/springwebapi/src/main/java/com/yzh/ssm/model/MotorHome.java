@@ -1,5 +1,8 @@
 package com.yzh.ssm.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.Date;
 
 /**
@@ -8,6 +11,8 @@ import java.util.Date;
  *
  * @mbg.generated 2018-11-23 09:33:01
  */
+
+@ApiModel(value="MotorHome",description="MotorHome实体")//对类进行swagger注解
 public class MotorHome {
     /**
      * 自增ID
@@ -16,6 +21,8 @@ public class MotorHome {
      *
      * @mbg.generated 2018-11-23 09:33:01
      */
+
+    @ApiModelProperty(value="主键",name="id")//对类的字段属性进行swagger注解
     private Integer id;
 
     /**
@@ -25,6 +32,8 @@ public class MotorHome {
      *
      * @mbg.generated 2018-11-23 09:33:01
      */
+
+    @ApiModelProperty(value="分享id",name="shareuid")//对类的字段属性进行swagger注解
     private Integer shareuid;
 
     /**
@@ -34,6 +43,8 @@ public class MotorHome {
      *
      * @mbg.generated 2018-11-23 09:33:01
      */
+
+    @ApiModelProperty(value="访问者id",name="readuid")//对类的字段属性进行swagger注解
     private Integer readuid;
 
     /**
@@ -43,6 +54,8 @@ public class MotorHome {
      *
      * @mbg.generated 2018-11-23 09:33:01
      */
+
+    @ApiModelProperty(value="访问ip",name="ip")//对类的字段属性进行swagger注解
     private String ip;
 
     /**
@@ -52,6 +65,8 @@ public class MotorHome {
      *
      * @mbg.generated 2018-11-23 09:33:01
      */
+
+    @ApiModelProperty(value="访问时间",name="readdate")//对类的字段属性进行swagger注解
     private Date readdate;
 
     /**

@@ -9,4 +9,5 @@
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
     <jaxws:endpoint id="TestService" implementor="com.yzh.ssm.service.impl.TestServiceImpl" address="/TestService"/>
+    <jaxws:endpoint id="MotorService" implementor="com.yzh.ssm.service.impl.MotorServiceImpl" address="/MotorService"/>
 </beans>
