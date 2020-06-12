@@ -201,6 +201,7 @@ target/
 logs/
 */.flattened-pom.xml
 /.idea/
+/out/
 /.flattened-pom.xml
 .idea/compiler.xml
 .idea/misc.xml
